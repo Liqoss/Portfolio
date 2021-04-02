@@ -1,0 +1,107 @@
+@media screen and (max-width: 1085px) {
+
+    body #works{
+        height: 170vh;
+    }
+
+    body #works .row{
+        flex-wrap: wrap;
+    }
+
+    body #works .row .workContainer{
+        padding: 2rem;
+    }
+
+    body #experiences::after{
+        top: 448vh;
+    }
+
+    body #contact #divContact{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 779px) {
+
+    body #about div img{
+        width: 16rem;
+    }
+
+    body #about div p{
+        width: 55%;
+    }
+
+    #header::after{
+        content: ' /!\\ Responsive en cours de développement !';
+        background-color: white;
+        color: red;
+        position: absolute;
+        top: 10rem;
+        left: 0;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 748px) {
+
+    body #header ul li{
+        display: none;
+    }
+
+    body #header ul::after{
+        content: '';
+        width: 30px;
+        height: 30px;
+        background-image: url('/images/nav.png');
+        background-size: cover;
+        filter: invert(1) drop-shadow(2px 4px 6px black);
+        position: relative;
+        top: 1rem;
+        right: 5rem;
+    }
+
+    body #header ul:hover::after{
+        cursor: pointer;
+    }
+
+    body #header ul:active li{
+        display: flex;
+    }
+
+    body #works{
+        height: 250vh;
+    }
+
+    body #works .row{
+        flex-direction: column;
+    }
+
+    body #experiences::after{
+        top: 528vh;
+    }
+}
+
+@media screen and (max-width: 708px) {
+    
+    body #about div img{
+        display: none;
+    }
+
+    body #about div p{
+        width: 80%;
+    }
+
+    body #about{
+        height: 65vh;
+    }
+
+    body #skills::after{
+        top: 173vh;
+    }
+
+    body #experiences::after{
+        top: 523vh;
+    }
+}
+
+

@@ -1,0 +1,459 @@
+@font-face{
+  font-family: 'header';
+  src: url('/Louis\ George\ Cafe.ttf');
+}
+
+@keyframes slider {
+  0% { transform: translateX(0px); }
+  20% { transform: translateX(0px); }
+  40% { transform: translateX(-100vw)}
+  60% { transform: translateX(-100vw); }
+  80% { transform: translateX(-200vw); }
+  100% { transform: translateX(-200vw); }
+}
+
+@keyframes upDown {
+  0% { transform: translateY(0px); }
+  33% { transform: translateY(0px); }
+  66% {
+    transform: translateY(8px); 
+    opacity: 0 1s;
+  }
+  100% { 
+    transform: translateY(8px); 
+    opacity: 0;
+  }
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font-family: 'header';
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+#header{
+  height: 8vh;
+  width: 98%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'header';
+  font-weight: bolder;
+  position: absolute;
+  top: 2rem;
+  right: 0;
+  z-index: 1;
+}
+
+#header #image{
+  background: url('/images/avataaars.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 6rem;
+  height: 6rem;
+  margin-left: 2rem;
+  filter: sepia(0.4) drop-shadow(2px 4px 6px black);
+}
+
+#header #image:hover{
+  background: url('/images/avatar-circle.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#header ul{
+  display: flex;
+  color: white;
+}
+
+#header ul li{
+  list-style: none;
+  margin: 0 2rem 0 0;
+  font-size: 1.2rem;
+  padding-bottom: 0.3rem;
+  text-shadow: 1px 1px 1px black;
+  background: linear-gradient(to top, white 0px, white 1px, transparent 2px) no-repeat;
+  background-size: 0 100%;
+  transition: 0.5s ease;
+}
+
+#header ul li:hover{
+  cursor: pointer;
+  background-size: 100% 100%;
+}
+
+#header #mouse{
+  width: 1rem;
+  height: 1.7rem;
+  border: 2px solid white;
+  border-radius: 1rem;
+  position: absolute;
+  top: 90vh;
+  left: 48vw;
+}
+
+#header #mouse #scroll{
+  width: 3px;
+  height: 6px;
+  background-color: white;
+  border-radius: 3px;
+  margin: 5px auto;
+  animation: upDown ease-in-out 2s infinite;
+}
+
+main{
+  overflow: hidden;
+}
+
+#accueil{
+  background-image: url('/images/propo2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 108vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'header';
+  font-size: 2rem;
+  color: white;
+  text-shadow: 2px 2px black;
+  position: relative;
+  top: -8vh;
+}
+
+#accueil h1{
+  font-size: 2.5rem;
+  font-weight: bolder;
+  margin-bottom: 1.5rem;
+}
+
+#about{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 70vh;
+}
+
+#about h1{
+  font-size: 2rem;
+  position: relative;
+  bottom: 1rem;
+  padding: 1rem;
+  border-bottom: 1px solid #FF5C5C;
+}
+
+#about div{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+#about div img{
+  width: 21rem;
+}
+
+#about div p{
+  width: 50%;
+  text-align: justify;
+  line-height: 1.5rem;
+  padding-bottom: 2rem;
+}
+
+#skills{
+  height: 100vh;
+  background-image: url('/images/laptop-background.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+#skills #slider{
+  width: 300vw;
+  height: 100vh;
+  display: flex;
+  z-index: 1;
+}
+
+#skills .imageContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  animation: slider 10s ease-in-out alternate infinite;
+  z-index: 2;
+}
+
+#skills .imageContainer h1{
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 6rem;
+  text-shadow: 1px 1px 10px black;
+  letter-spacing: 0.7rem;
+}
+
+#skills .imageContainer h2{
+  display: flex;
+  align-self: center;
+  font-size: 1.8rem;
+  letter-spacing: 0.1rem;
+  font-weight: bolder;
+}
+
+#skills .imageContainer .divImageContainer{
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+}
+
+#skills::after{
+  content: '';
+  position: absolute;
+  top: 178vh;
+  left: 0;
+  background-color: rgb(240, 144, 144);
+  opacity: 0.6;
+  height: 100%;
+  width: 100%;
+}
+
+.icone{
+  width: 80px;
+}
+
+#works{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#works h1{
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  padding: 1rem;
+  border-bottom: 1px solid #FF5C5C;
+}
+
+#works .row{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  top: 3rem;
+}
+
+#works .row .workContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  padding: 1.5rem;
+  transition: 0.7s ease-in-out;
+}
+
+#works .row .workContainer figcaption{
+  width: 18rem;
+  padding-top: 1rem;
+  text-align: justify;
+  visibility: hidden;
+}
+
+#works .row .workContainer:hover figcaption{
+  visibility: inherit;
+}
+
+#works .row .workContainer:hover{
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+#works img{
+  width: 19rem;
+  height: 11rem;
+  box-shadow: 1px 1px 10px grey;
+}
+
+#experiences{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/images/metalTexture.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 0;
+}
+
+#experiences::after{
+  content: '';
+  background-color: rgb(240, 145, 145);
+  opacity: 0.4;
+  position: absolute;
+  top: 378vh;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+}
+
+#experiences a{
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: bolder;
+  letter-spacing: 0.5rem;
+  border: 2px solid white;
+  border-radius: 2rem;
+  padding: 1rem 1rem 1rem 2rem;
+  margin-top: 3rem;
+  z-index: 2;
+}
+
+#experiences a:hover{
+  cursor: pointer;
+  color: white;
+  border-color: #FF5C5C;
+  background-color: #FF5C5C;
+  transition: ease-in-out 0.5s;
+}
+
+#experiences img{
+  width: 20rem;
+  z-index: 2;
+}
+
+#contact{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+#contact h1{
+  font-size: 2rem;
+  letter-spacing: 0.5rem;
+  margin: 6rem 0 3rem 0;
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #FF5C5C;
+}
+
+#contact #divContact{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 4rem;
+}
+
+#contact #info{
+  border: 1px solid #FF5C5C;
+  padding: 1rem;
+  line-height: 2rem;
+  margin-left: 3rem;
+  width: 50%;
+}
+
+#contact div ul li i{
+  margin-right: 1rem;
+  width: 20px;
+  color: #FF5C5C;
+}
+
+#contact div ul li:hover a{
+  color: #FF5C5C;
+}
+
+#form{
+  width: 25vw;
+  display: flex;
+  flex-direction: column;
+  margin-right: 3rem;
+}
+
+#form input, textarea{
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border-radius: 3rem;
+  border: 1px solid #FF5C5C;
+  outline-style: none;
+  text-align: center;
+}
+
+#form input:focus, textarea:focus{
+  border: 2px solid #FF5C5C;
+  border-style: double;
+}
+
+#form textarea{
+  height: 3rem;
+  border-radius: 2rem;
+}
+
+#form input::placeholder, textarea::placeholder{
+  text-align: center;
+  vertical-align: middle;
+}
+
+#form button{
+  background-color: #FF5C5C;
+  color: white;
+  width: 40%;
+  height: 2rem;
+  text-align: center;
+  border-radius: 3rem;
+  border-color: #FF5C5C;
+  font-family: 'header';
+  align-self: center;
+  transition: 0.5s;
+}
+
+#form button:hover{
+  border-style: ridge;
+  cursor: pointer;
+}
+
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8vh;
+  color: white;
+  background-color: #FF5C5C;
+}
+
+footer a{
+  text-decoration: none;
+  color: white;
+  position: absolute;
+  right: 6rem;
+}
+
+footer a i{
+  padding: 0.5rem;
+  border: 2px solid white;
+  border-radius: 3rem;
+  transition: 0.5s ease-in-out;
+}
+
+footer a i:hover{
+  cursor: pointer;
+  color: #FF5C5C;
+  background-color: white;
+}

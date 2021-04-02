@@ -1,0 +1,38 @@
+* * ARCHITECTURE  * *
+*		              *
+* - One page site - *
+*		              *
+* * * * * * * * * * *
+
+
+* * * * VH #1 * * * *
+*  Bienvenue +      *
+*  présentation     *
+* * * * * * * * * * *
+
+
+* * * * VH #2 * * * * * 
+* Suite présentation  *
+* * * * * * * * * * * * 
+
+
+* * * * VH #3 * * * * * 
+* Carroussel compéten *
+* avec image de fond  *
+* + téléchargement cv *
+* * * * * * * * * * * *
+
+
+* * * * VH #4 * * * * * 
+* Formulaire contact  *
+* * * * * * * * * * * *
+
+background-image : opacity
+animation :
+   - scroll
+   - apparition des composants
+
+Reste à faire :
+- interraction menu
+- formuaire de contact
+- styliser les compétences

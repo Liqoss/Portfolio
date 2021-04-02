@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pierre's website</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header id="header">
+        <div id='image'></div>
+        <ul>
+            <li id="headerAccueil"><a href="#">Accueil</a></li>
+            <li id="headerAbout"><a href="#about">À Propos</a></li>
+            <li id="headerSkills"><a href="#skills">Compétences</a></li>
+            <li id="headerWorks"><a href="#works">Travaux</a></li>
+            <li id="headerExperiences"><a href="#experiences">Contact</a></li>
+        </ul>
+        <div id="mouse"><div id="scroll"></div></div>
+    </header>
+
+    <main>
+        <section id="accueil">
+            <h1 class="accueilContent">Pruvost Pierre</h1>
+            <h2 class="accueilContent">Développeur Web junior</h2>
+        </section>
+
+        <section id="about">
+            <h1>À PROPOS DE MOI</h1>
+            <div>
+                <img src="images/avatar.png" alt="Avatar à l'effigie de l'auteur">
+                <p>Bonjour,<br>Je m'appelle Pierre Pruvost, j'ai 24 ans, et je suis développeur web.<br><br>J'ai, aussi loin que je me souvienne, démontré mon attrait vers les technologies informatiques et notamment le développement, malgré cela, j'ai poursuivi mes études dans le domaine juridique où j'ai validé un DEUG de droit.<br><br>Après quelques péripéties, et après cet affront fait à ma passion d'origine,  je me suis lancé dans l'apprentissage du métier de développeur web junior. J'ai d'abord suivi un parcours diplomant par le biais d'OpenClassrooms, et depuis je continue à me perfectionner sur certaines technologies ou en à apprendre d'autres.  </p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div id="slider">
+                <div id="frontend" class="imageContainer">
+                    <h1>Mes technos frontend</h1>
+                    <div class="divImageContainer">
+                        <i class="fab fa-html5 fa-5x"><span></span></i>
+                        <i class="fab fa-css3-alt fa-5x"></i>
+                        <i class="fab fa-js-square fa-5x"></i>
+                    </div>
+                </div>
+                <div id="backend" class="imageContainer">
+                    <h1>Mes technos backend</h1>
+                    <div class="divImageContainer">
+                        <i class="fab fa-node-js fa-5x"></i>
+                        <img src="/images/mysql.png" class="icone">
+                        <h2>Express.js</h2>
+                    </div>
+                </div>
+                <div id="framework" class="imageContainer">
+                    <h1>Mes CMS / frameworks</h1>
+                    <div class="divImageContainer">
+                        <i class="fab fa-react fa-5x"></i>
+                        <i class="fab fa-sass fa-5x"></i>
+                        <i class="fab fa-bootstrap fa-5x"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="works">
+            <h1>MES TRAVAUX</h1>
+            <div class="row">
+                <figure id='css' class="workContainer">
+                    <a href="https://liqoss.github.io/Projet3/" target="_blank"><img src="./images/portfolio3.png"></a>
+                    <figcaption>Projet ayant comme objectif la réalisation d'animations css sur un site fictif.</figcaption>
+                </figure>
+                <figure id='bootstrap' class="workContainer">
+                    <a href="https://liqoss.github.io/Projet4/" target="_blank"><img src="./images/portfolio4.png"></a>
+                    <figcaption>Le but, ici, était la gestion de la migration d'une ancienne version de Bootstrap et Jquery à leur version en date du projet. D'autre part, une attention devait être portée sur l'accessibilité et la stratégie SEO.</figcaption>
+                </figure>
+                <figure id='ajax' class="workContainer">
+                    <a href="https://github.com/Liqoss/Projet5" target="_blank"><img src="./images/portfolio5.png"></a>
+                    <figcaption>Ce projet imposait une bonne maîtrise des requêtes "http" afin de récupérer les informations nécessaires depuis une API. Utilisation de Javascript sans frameworks ni librairies.</figcaption>
+                </figure>
+            </div>
+            <div class="row">
+                <figure id='node' class="workContainer">
+                    <a href="https://github.com/Liqoss/Projet6" target="_blank"><img src="./images/portfolio6.png"></a>
+                    <figcaption>Projet ayant pour but de développer le backend d'une application frontend. Utilisation de Node.js, Express.js, JWT et MongoDB.</figcaption>
+                </figure>
+                <figure id='network' class="workContainer">
+                    <a href="https://github.com/Liqoss/Projet7" target="_blank"><img src="./images/portfolio7.png"></a>
+                    <figcaption>Développement complet d'un réseau social fictif, avec l'élaboration d'une API front et back. Utilisation de React, Node.js, Express.js, JWT et MySQL.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="experiences">
+            <img src="./images/cvImage.png" alt="Curriculum vitae de l'auteur">
+            <a href="./images/CV_Pierre_Pruvost.pdf" download="cvPierrePruvost">
+                Télécharger mon C.V !
+            </a>
+            <div>
+                <h1></h1>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h1>CONTACTER MOI</h1>
+            <div id="divContact">
+                <form id="form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSfcLRQwPne3fjAUXzn1uTkaDUgPgL0KFhfXVV_Ggu7tTCVxhQ/formResponse">
+                    <input type="text" placeholder="Nom" name="entry.1324121814" required>
+                    <input type="text" placeholder="Prénom" name="entry.2036989439" required>
+                    <input type="email" placeholder="Email" name="entry.916350481" required>
+                    <textarea type="text" placeholder="Votre message ..." name="entry.166199551" required></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+                <div id="info">
+                    <ul>
+                        <li><i class="far fa-address-card"></i>Pruvost Pierre</li>
+                        <li><i class="far fa-envelope"></i><a href="mailto:pruvost.pierre59@gmail.com">pruvost.pierre59@gmail.com</a></li>
+                        <li><i class="far fa-map"></i><a href="https://www.google.fr/maps/place/59700+Marcq-en-Bar%C5%93ul/@50.6792883,3.0655607,13z/data=!3m1!4b1!4m5!3m4!1s0x47c32a2949a97adf:0xa87a5ee2bf1df6d6!8m2!3d50.670368!4d3.096267">2 rue Copernic, 59700 Marcq-en-Baroeul</a></li>
+                        <li><i class="fas fa-mobile-alt"></i>06.26.60.12.43</li>
+                        <li><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/pierre-pruvost-78096413b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BG8y4zJrTQ464An%2Fn1LChzw%3D%3D">Mon Linkedin</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2021, Pruvost Pierre, Tous droits réservés</p>
+        <a href="#"><i class="fas fa-arrow-up"></i></a>
+    </footer>
+
+<script src="js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+<script src="https://kit.fontawesome.com/48432da99e.js" crossorigin="anonymous"></script>
+
+</body>
+</html>
