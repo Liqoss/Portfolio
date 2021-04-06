@@ -1,3 +1,8 @@
+@keyframes nav{
+    0% { opacity: 0;}
+    100% { opacity: 1;}
+}
+
 @media screen and (max-width: 1085px) {
 
     body #works{
@@ -16,8 +21,30 @@
         top: 448vh;
     }
 
+    body #contact{
+        height: 110vh;
+    }
+
     body #contact #divContact{
         flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        align-items: center;
+        margin-top: inherit;
+        width: 60%;
+    }
+
+    body #contact #divContact form{
+        margin-right: inherit;
+        width: 100%;
+    }
+
+    body #contact #divContact #info{
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: inherit;
     }
 }
 
@@ -31,45 +58,58 @@
         width: 55%;
     }
 
-    #header::after{
-        content: ' /!\\ Responsive en cours de développement !';
-        background-color: white;
-        color: red;
-        position: absolute;
-        top: 10rem;
-        left: 0;
-        width: 100%;
+    body #works .row .workContainer figcaption{
+        visibility: visible;
     }
 }
 
 @media screen and (max-width: 748px) {
 
-    body #header ul li{
+    body #header ul{
+        flex-direction: column;
+    }
+
+    body #header ul{
         display: none;
     }
 
-    body #header ul::after{
-        content: '';
+
+    body #header #responsiveNav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        width: 30px;
+        margin-right: 4rem;
+    }
+
+    body #header #responsiveNav div{
         width: 30px;
         height: 30px;
         background-image: url('/images/nav.png');
         background-size: cover;
         filter: invert(1) drop-shadow(2px 4px 6px black);
-        position: relative;
-        top: 1rem;
-        right: 5rem;
     }
 
-    body #header ul:hover::after{
+    body #header #responsiveNav:hover{
         cursor: pointer;
+        transform: scaleX(50vw);
     }
 
-    body #header ul:active li{
+    body #header #responsiveNav:hover ul{
+        display: flex;
+        transform: translateX(0);
+        transition: 1s ease-in-out;
+        padding-top: 1rem;
+        width: fit-content;
+    }
+
+    body #header ul:hover{
         display: flex;
     }
 
     body #works{
-        height: 250vh;
+        height: 260vh;
     }
 
     body #works .row{
@@ -77,7 +117,7 @@
     }
 
     body #experiences::after{
-        top: 528vh;
+        top: 538vh;
     }
 }
 
@@ -99,8 +139,84 @@
         top: 173vh;
     }
 
+    body #skills .imageContainer .divImageContainer{
+        width: 100%;
+    }
+
     body #experiences::after{
-        top: 523vh;
+        top: 533vh;
+    }
+
+    @media screen and (max-width: 605px) {
+
+        body #skills #slider h1{
+            text-align: center;
+            letter-spacing: 0.3rem;
+        }
+
+        body #contact #divContact{
+            width: 90%;
+        }
+
+        body footer #up{
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 550px) {
+
+        body #about{
+            height: 80vh;
+        }
+
+        body #skills::after{
+            top: 188vh;
+        }
+
+        body #experiences a{
+            letter-spacing: 0.2rem;
+            font-size: 1.7rem;
+            padding: 0.5rem 0.7rem;
+        }
+
+        body #experiences::after{
+            top: 548vh;
+        }
+
+        body #contact span{
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 375px){
+
+        body #accueil h2 span{
+            display: none;
+        }
+
+        body #experiences img{
+            width: 15rem;
+        }
+
+        body #experiences a span{
+            display: none;
+        }
+
+        body #works h1{
+            text-align: center;
+        }
+
+        body #about{
+            height: 90vh;
+        }
+
+        body #skills::after{
+            top: 198vh;
+        }
+
+        body #experiences::after{
+            top: 558vh;
+        }
     }
 }
 

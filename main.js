@@ -5,7 +5,7 @@ const experiences = document.getElementById('headerExperiences');
 const submit = document.getElementById('submit');
 
 function animateHeader(){
-    TweenMax.from('#header', 3, {transform: 'translateX(-100vw)'})
+    TweenMax.from('#header', 2, {transform: 'translateX(-100vw)'}).delay(1)
 }
 
 function animateHome(){

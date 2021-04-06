@@ -12,20 +12,30 @@
 <body>
     <header id="header">
         <div id='image'></div>
-        <ul>
+        <ul id="largeNav">
             <li id="headerAccueil"><a href="#">Accueil</a></li>
             <li id="headerAbout"><a href="#about">À Propos</a></li>
             <li id="headerSkills"><a href="#skills">Compétences</a></li>
             <li id="headerWorks"><a href="#works">Travaux</a></li>
             <li id="headerExperiences"><a href="#experiences">Contact</a></li>
         </ul>
-        <div id="mouse"><div id="scroll"></div></div>
+        <nav id="responsiveNav">
+            <div></div>
+            <ul>
+                <li id="headerAccueil"><a href="#">Accueil</a></li>
+                <li id="headerAbout"><a href="#about">À Propos</a></li>
+                <li id="headerSkills"><a href="#skills">Compétences</a></li>
+                <li id="headerWorks"><a href="#works">Travaux</a></li>
+                <li id="headerExperiences"><a href="#experiences">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
         <section id="accueil">
             <h1 class="accueilContent">Pruvost Pierre</h1>
-            <h2 class="accueilContent">Développeur Web junior</h2>
+            <h2 class="accueilContent">Développeur Web <span>junior</span></h2>
+            <div id="mouse"><div id="scroll"></div>
         </section>
 
         <section id="about">
@@ -70,7 +80,7 @@
             <div class="row">
                 <figure id='css' class="workContainer">
                     <a href="https://liqoss.github.io/Projet3/" target="_blank"><img src="./images/portfolio3.png"></a>
-                    <figcaption>Projet ayant comme objectif la réalisation d'animations css sur un site fictif.</figcaption>
+                    <figcaption>Projet ayant comme objectif la réalisation d'animations css sur un site fictif. Un bon respect des normes W3C était exigé.</figcaption>
                 </figure>
                 <figure id='bootstrap' class="workContainer">
                     <a href="https://liqoss.github.io/Projet4/" target="_blank"><img src="./images/portfolio4.png"></a>
@@ -78,7 +88,7 @@
                 </figure>
                 <figure id='ajax' class="workContainer">
                     <a href="https://github.com/Liqoss/Projet5" target="_blank"><img src="./images/portfolio5.png"></a>
-                    <figcaption>Ce projet imposait une bonne maîtrise des requêtes "http" afin de récupérer les informations nécessaires depuis une API. Utilisation de Javascript sans frameworks ni librairies.</figcaption>
+                    <figcaption>Ce projet e-commerce imposait une bonne maîtrise des requêtes "http" afin de récupérer les informations nécessaires depuis une API. Utilisation de Javascript sans frameworks ni librairies.</figcaption>
                 </figure>
             </div>
             <div class="row">
@@ -96,7 +106,7 @@
         <section id="experiences">
             <img src="./images/cvImage.png" alt="Curriculum vitae de l'auteur">
             <a href="./images/CV_Pierre_Pruvost.pdf" download="cvPierrePruvost">
-                Télécharger mon C.V !
+                Télécharger <span>mon </span>C.V !
             </a>
             <div>
                 <h1></h1>
@@ -117,7 +127,7 @@
                     <ul>
                         <li><i class="far fa-address-card"></i>Pruvost Pierre</li>
                         <li><i class="far fa-envelope"></i><a href="mailto:pruvost.pierre59@gmail.com">pruvost.pierre59@gmail.com</a></li>
-                        <li><i class="far fa-map"></i><a href="https://www.google.fr/maps/place/59700+Marcq-en-Bar%C5%93ul/@50.6792883,3.0655607,13z/data=!3m1!4b1!4m5!3m4!1s0x47c32a2949a97adf:0xa87a5ee2bf1df6d6!8m2!3d50.670368!4d3.096267">2 rue Copernic, 59700 Marcq-en-Baroeul</a></li>
+                        <li><i class="far fa-map"></i><a href="https://www.google.fr/maps/place/59700+Marcq-en-Bar%C5%93ul/@50.6792883,3.0655607,13z/data=!3m1!4b1!4m5!3m4!1s0x47c32a2949a97adf:0xa87a5ee2bf1df6d6!8m2!3d50.670368!4d3.096267"><span>2 rue Copernic, </span>59700 Marcq-en-Baroeul</a></li>
                         <li><i class="fas fa-mobile-alt"></i>06.26.60.12.43</li>
                         <li><i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/pierre-pruvost-78096413b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BG8y4zJrTQ464An%2Fn1LChzw%3D%3D">Mon Linkedin</a></li>
                     </ul>
@@ -128,7 +138,7 @@
 
     <footer>
         <p>© 2021, Pruvost Pierre, Tous droits réservés</p>
-        <a href="#"><i class="fas fa-arrow-up"></i></a>
+        <a id='up' href="#"><i class="fas fa-arrow-up"></i></a>
     </footer>
 
 <script src="js/main.js"></script>
